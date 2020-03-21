@@ -700,17 +700,12 @@ a {
 
 .navigation__item--new:before{
   position: absolute;
-  content: "new";
-  background-color: red;
-  width: 90px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: lighter;
-  top: 6px;
-  right: -25px;
-  transform: rotate(45deg);
+  content: "";
+  width: 60px;
+  height: 59px;
+  background-image: url("../img/new-flag.png");
+  top: 0;
+  right: 0;
 }
 
 .navigation__wrapper-2{
@@ -806,6 +801,7 @@ a {
   height: 40px;
   top: 114px;
   right: 20px;
+  font-size: 0;
 }
 
 .icon-left{
@@ -816,6 +812,7 @@ a {
   top: 114px;
   left: 25px;
   cursor: pointer;
+  font-size: 0;
 }
 
 
@@ -905,7 +902,7 @@ a {
 }
 
 .products__item:hover{
-  box-shadow:  0 25px 70px -15px rgba(0,0,0,0.62);
+  box-shadow:  0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .products--inner .products__item:nth-child(4n){
@@ -951,6 +948,8 @@ a {
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
+
+  tab-index: 0;
 }
 
 .bookmark {
@@ -1038,20 +1037,13 @@ a {
 
 .products__item--new:before {
   position: absolute;
-  content: "new";
-  background-color: red;
-  width: 80px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  font-size: small;
-  font-weight: lighter;
+  content: "";
+  width: 60px;
+  height: 59px;
+  background-image: url("../img/new-flag.png");
   top: 0;
-  right: -23px;
-  transform: rotate(45deg);
+  right: 0;
 }
-
-
 
 
 /*section about manufacturers*/
@@ -1200,6 +1192,20 @@ a {
   display: flex;
   margin-top: 68px;
   margin-bottom: 98px;
+}
+
+.services-list{
+  position: relative;
+}
+
+.services-list::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/shadow.png");
+  top: -40px;
+  right: 0;
 }
 
 .slider-content{
@@ -1446,6 +1452,7 @@ a {
   height: 12px;
   left: -55px;
   top: 2px;
+  font-size: 0;
 }
 
 .breadcrumbs__item {
@@ -1650,6 +1657,10 @@ a {
 }
 
 .filter-input + label:disabled::before {
+  opacity: 0.5;
+}
+
+.filter-input-radio + label:disabled::before {
   opacity: 0.5;
 }
 
