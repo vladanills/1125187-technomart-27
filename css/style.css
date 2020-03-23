@@ -9,6 +9,7 @@ body {
   color: #ffffff;
   text-transform: none;
   background-color: #000000;
+  min-width: 960px;
 }
 
 a {
@@ -793,7 +794,9 @@ a {
   height: 266px;
 }
 
+
 .icon-right{
+  content: "";
   display: block;
   position: absolute;
   background-image: url("../img/icon-right.svg");
@@ -924,6 +927,11 @@ a {
 }
 
 .products__item:hover .actions {
+  display: block;
+  z-index: 8;
+}
+
+.products__item:focus-within .actions {
   display: block;
   z-index: 8;
 }
@@ -1656,12 +1664,12 @@ a {
   opacity: 1;
 }
 
-.filter-input + label:disabled::before {
-  opacity: 0.5;
+.filter-input:disabled + label{
+  opacity: 0.4;
 }
 
-.filter-input-radio + label:disabled::before {
-  opacity: 0.5;
+.filter-input-radio:disabled + label{
+  opacity: 0.4;
 }
 
 .filter-input-radio + label::before {
